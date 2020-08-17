@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Peter Ullrich</Authors>
+    <Company>dotup IT solutions</Company>
+    <Copyright>Copyright © Peter Ullrich, dotup IT solutions 2019</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>Integrate font icons in your dot net project.</Description>
+    <PackageProjectUrl>https://github.com/dotupNET/NetFontIcons</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dotupNET/NetFontIcons</RepositoryUrl>
+    <PackageTags>xamarin wpf net font icon awesomefont material design font</PackageTags>
+    <Version>1.0.4</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NetFontIcons.1.0.3.nupkg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

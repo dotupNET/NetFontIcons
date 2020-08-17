@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d"
+  x:Class="NetFontIcons.Xamarin.Resources"
+	xmlns:nx="clr-namespace:NetFontIcons.Xamarin"
+>
+
+	<nx:FontIconConverter x:Key="FontIconConverter" />
+
+	<!-- Material design font family -->
+	<OnPlatform x:Key="MaterialDesignFontFamily" x:TypeArguments="x:String">
+		<On Platform="iOS" Value="Material Design Icons" />
+		<On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+		<On Platform="UWP" Value="Assets/Fonts/materialdesignicons-webfont.ttf#Material Design Icons" />
+	</OnPlatform>
+
+	<!-- Font awesome brands -->
+	<OnPlatform x:Key="FontAwesomeBrandsFontFamily" x:TypeArguments="x:String">
+		<On Platform="Android" Value="FontAwesome5Brands.otf#Regular" />
+		<On Platform="iOS" Value="FontAwesome5Brands-Regular" />
+		<On Platform="UWP" Value="/Assets/Fonts/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
+	</OnPlatform>
+
+	<!-- Font awesome solid -->
+	<OnPlatform x:Key="FontAwesomeSolidFontFamily" x:TypeArguments="x:String">
+		<On Platform="Android" Value="FontAwesome5Solid.otf#Regular" />
+		<On Platform="iOS" Value="FontAwesome5Free-Solid" />
+		<On Platform="UWP" Value="/Assets/Fonts/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+	</OnPlatform>
+
+	<!-- Font awesome regular -->
+	<OnPlatform x:Key="FontAwesomeRegularFontFamily" x:TypeArguments="x:String">
+		<On Platform="Android" Value="FontAwesome5Regular.otf#Regular" />
+		<On Platform="iOS" Value="FontAwesome5Free-Regular" />
+		<On Platform="UWP" Value="/Assets/Fonts/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+	</OnPlatform>
+
+	<Style TargetType="Label" x:Key="MaterialDesignIcon">
+		<Setter Property="FontFamily" Value="{StaticResource MaterialDesignFontFamily}" />
+		<Setter Property="Text" Value="{Binding Converter={StaticResource Key=FontIconConverter}, ConverterParameter={RelativeSource Self}}" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="HorizontalTextAlignment" Value="Center" />
+	</Style>
+
+	<Style TargetType="Label" x:Key="FontAwesomeBrandsIcon">
+		<Setter Property="FontFamily" Value="{StaticResource FontAwesomeBrandsFontFamily}" />
+		<Setter Property="Text" Value="{Binding Converter={StaticResource Key=FontIconConverter}, ConverterParameter={RelativeSource Self}}" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="HorizontalTextAlignment" Value="Center" />
+	</Style>
+
+
+	<Style TargetType="Label" x:Key="FontAwesomeSolidIcon">
+		<Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolidFontFamily}" />
+		<Setter Property="Text" Value="{Binding Converter={StaticResource Key=FontIconConverter}, ConverterParameter={RelativeSource Self}}" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="HorizontalTextAlignment" Value="Center" />
+	</Style>
+
+	<Style TargetType="Label" x:Key="FontAwesomeRegularIcon">
+		<Setter Property="FontFamily" Value="{StaticResource FontAwesomeRegularFontFamily}" />
+		<Setter Property="Text" Value="{Binding Converter={StaticResource Key=FontIconConverter}, ConverterParameter={RelativeSource Self}}" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="HorizontalTextAlignment" Value="Center" />
+	</Style>
+
+</ResourceDictionary>
